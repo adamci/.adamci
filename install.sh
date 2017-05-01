@@ -2,10 +2,13 @@
 #git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 # TODO install command-not-found
 #brew tap homebrew/command-not-found
+# TODO install diff-so-fancy
+# TODO install icdiff
 
 # Create symbolic links
 which zsh && ln .zshrc ~/.zshrc
 which vim && ln .vimrc ~/.vimrc
+which git && ln .gitconfig ~/.gitconfig
 
 # TODO install vundle
 #git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
