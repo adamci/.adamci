@@ -65,6 +65,8 @@ nnoremap <C-l> <C-w><Right>
 map <Tab>h gT
 map <Tab>l gt
 
+autocmd VimResized * execute "normal! \<C-w>="
+
 " CommandT config
 let g:CommandTTraverseSCM = 'pwd'
 let g:CommandTWildIgnore=&wildignore . ",**/node_modules/**"
