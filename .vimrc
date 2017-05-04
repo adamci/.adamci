@@ -10,6 +10,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'wincent/command-t'
+Plugin 'tpope/vim-fugitive'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'Valloric/YouCompleteMe'
