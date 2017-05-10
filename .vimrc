@@ -49,6 +49,9 @@ set splitright
 set expandtab
 set softtabstop=4
 set shiftwidth=4
+set breakindent
+set breakindentopt=shift:2
+let &showbreak='⤷ '
 set noswapfile
 set undofile
 set undodir=~/.vim/undodir
