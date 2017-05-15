@@ -15,6 +15,7 @@ bindkey -v
 # Misc settings
 export TERM="xterm-256color"
 mkdir -p ~/.vim/undodir
+stty -ixon -ixoff
 
 # Base16
 BASE16_SHELL=$HOME/.config/base16-shell/
