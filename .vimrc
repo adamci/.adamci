@@ -69,6 +69,8 @@ nnoremap <C-l> <C-w><Right>
 map <Tab>h gT
 map <Tab>l gt
 
+nnoremap <Leader>w :update<CR>
+
 autocmd VimResized * execute "normal! \<C-w>="
 
 " CommandT config
@@ -87,7 +89,7 @@ nnoremap <Leader>yt ::YcmCompleter GetType<CR>
 " NERD Tree config
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-nnoremap <silent> <Leader>f :NERDTreeToggle<Enter>
+nnoremap <silent> <Leader>f :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 let NERDTreeQuitOnOpen = 1
 let NERDTreeAutoDeleteBuffer = 1
