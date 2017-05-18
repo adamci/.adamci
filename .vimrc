@@ -34,7 +34,6 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 let mapleader = "\<Space>"
-set number
 set list
 set listchars=tab:>-
 set ru
@@ -72,6 +71,18 @@ map <Tab>l gt
 nnoremap <Leader>w :update<CR>
 
 autocmd VimResized * execute "normal! \<C-w>="
+
+" Relative line number config, adapted from Greg Hurrell
+set number
+set relativenumber
+nnoremap <silent> <Leader>r :call <SID>cycle_numbering()<CR>
+function! s:cycle_numbering() abort
+    execute {
+          \ '00': 'set relativenumber   | set number',
+          \ '01': 'set norelativenumber | set number',
+          \ '10': 'set relativenumber   | set number',
+          \ '11': 'set norelativenumber | set number' }[&number . &relativenumber]
+endfunction
 
 " CommandT config
 let g:CommandTTraverseSCM = 'pwd'
