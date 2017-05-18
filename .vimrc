@@ -70,7 +70,12 @@ map <Tab>l gt
 
 nnoremap <Leader>w :update<CR>
 
+" Resize config
 autocmd VimResized * execute "normal! \<C-w>="
+nnoremap <silent> <Left> :vertical resize +2<CR>
+nnoremap <silent> <Right> :vertical resize -2<CR>
+nnoremap <silent> <Up> :resize -2<CR>
+nnoremap <silent> <Down> :resize +2<CR>
 
 " Relative line number config, adapted from Greg Hurrell
 set number
