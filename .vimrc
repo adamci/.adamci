@@ -11,6 +11,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'wincent/command-t'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-commentary'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'Valloric/YouCompleteMe'
