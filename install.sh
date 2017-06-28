@@ -14,6 +14,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 which zsh 2>&1 > /dev/null && ln -vis "${DIR}/.zshrc" ~/.zshrc
 which vim 2>&1 > /dev/null && ln -vis "${DIR}/.vimrc" ~/.vimrc
 which git 2>&1 > /dev/null && ln -vis "${DIR}/.gitconfig" ~/.gitconfig
+which tmux 2>&1 > /dev/null && ln -vis "${DIR}/.tmux.conf" ~/.tmux.conf
 
 # TODO install vundle
 #git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
