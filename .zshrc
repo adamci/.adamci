@@ -35,6 +35,7 @@ antigen bundle npm
 antigen bundle osx
 antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle docker
 
 # Load the theme.
 antigen theme wedisagree
