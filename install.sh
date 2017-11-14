@@ -19,12 +19,17 @@ fi
 if ! type "icdiff" > /dev/null 2>&1; then
     brew install icdiff
 fi
+# Install ag
+if ! type "ag" > /dev/null 2>&1; then
+    brew install the_silver_searcher
+fi
 
 # Create symbolic links
 which zsh 2>&1 > /dev/null && ln -vis "${DIR}/.zshrc" ~/.zshrc
 which vim 2>&1 > /dev/null && ln -vis "${DIR}/.vimrc" ~/.vimrc
 which git 2>&1 > /dev/null && ln -vis "${DIR}/.gitconfig" ~/.gitconfig
 which tmux 2>&1 > /dev/null && ln -vis "${DIR}/.tmux.conf" ~/.tmux.conf
+which ag 2>&1 > /dev/null && ln -vis "${DIR}/.agignore" ~/.agignore
 
 # TODO Check for correct vim version
 # Install vundle
