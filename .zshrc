@@ -1,7 +1,7 @@
 # The following lines were added by compinstall
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' max-errors 2 numeric
-zstyle :compinstall filename '/Users/adamcimpeanu/.zshrc'
+zstyle :compinstall filename "${HOME}/.zshrc"
 autoload -Uz compinit
 compinit
 
