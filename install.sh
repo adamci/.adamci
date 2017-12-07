@@ -23,6 +23,10 @@ fi
 if ! type "ag" > /dev/null 2>&1; then
     brew install the_silver_searcher
 fi
+# Install tmux
+if ! type "tmux" > /dev/null 2>&1; then
+    brew install tmux
+fi
 
 # Create symbolic links
 which zsh 2>&1 > /dev/null && ln -vis "${DIR}/.zshrc" ~/.zshrc
