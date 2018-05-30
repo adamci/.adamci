@@ -45,7 +45,6 @@ antigen apply
 # Antigen end
 
 # Aliases
-# alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias gs='git status'
 alias gl='git log --graph --left-right --format="%Cgreen%h %Cblue%an %Creset%s %Cred%d%Creset"'
 
