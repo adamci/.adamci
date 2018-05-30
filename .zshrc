@@ -47,6 +47,10 @@ antigen apply
 # Aliases
 alias gs='git status'
 alias gl='git log --graph --left-right --format="%Cgreen%h %Cblue%an %Creset%s %Cred%d%Creset"'
+alias ls='ls -GF'
+alias la='ls -lAh'
+alias mv='mv -i'
+alias cp='cp -i'
 
 # Colorful man pages
 man() {
