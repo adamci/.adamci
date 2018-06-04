@@ -86,6 +86,7 @@ which vim 2>&1 > /dev/null && ln -vis "${DIR}/.vimrc" ~/.vimrc
 which git 2>&1 > /dev/null && ln -vis "${DIR}/.gitconfig" ~/.gitconfig
 which tmux 2>&1 > /dev/null && ln -vis "${DIR}/.tmux.conf" ~/.tmux.conf
 which ag 2>&1 > /dev/null && ln -vis "${DIR}/.agignore" ~/.agignore
+ln -vis "${DIR}/.ideavimrc" ~/.ideavimrc
 
 # Install vim plugins
 vim +PluginUpdate +qa
