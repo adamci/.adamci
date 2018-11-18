@@ -8,6 +8,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 OS=`uname -s`
 DIST=0
+ARCH_PACMAN=yay
 
 if [ $OS == "Darwin" ]; then
     DIST=1
@@ -24,7 +25,7 @@ if [ $DIST == 0 ]; then
     echo $'Unsupported OS\nAborting install_packages.sh!\n'
     exit 1
 fi
-if [ $DIST == 2 ] && ! type pacaur > /dev/null 2>&1; then
+if [ $DIST == 2 ] && ! type $ARCH_PACMAN > /dev/null 2>&1; then
     echo "Install pacaur before continuing"
     exit 1
 fi
