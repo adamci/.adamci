@@ -2,6 +2,11 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+if [ $DIR != ~/.adamci ]; then
+    echo "Repo .adamci must be installed in home directory!"
+    exit
+fi
+
 source ./identify_os.sh
 
 # Install shell dependencies
