@@ -1,3 +1,5 @@
+source ~/.adamci/identify_os.sh
+
 # The following lines were added by compinstall
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' max-errors 2 numeric
@@ -33,10 +35,12 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle node
 antigen bundle npm
-antigen bundle osx
 antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle docker
+if [ "$DIST" = "1" ]; then
+    antigen bundle osx
+fi
 
 # Load the theme.
 antigen theme wedisagree

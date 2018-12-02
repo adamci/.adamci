@@ -8,6 +8,14 @@ if [ $DIR != ~/.adamci ]; then
 fi
 
 source ./identify_os.sh
+if [ "$DIST" = "0" ]; then
+    echo $'Unsupported OS\nAborting install_packages.sh!\n'
+    exit 1
+fi
+if [ "$DIST" = "2" ] && ! type $ARCH_PACMAN > /dev/null 2>&1; then
+    echo "Install $ARCH_PACMAN before continuing"
+    exit 1
+fi
 
 # Install shell dependencies
 if [[ ! -a ~/.vim/bundle/Vundle.vim ]]; then
