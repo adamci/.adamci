@@ -5,7 +5,7 @@ if ! grep -q "+ruby" <(vim --version); then
     exit 1
 fi
 
-if ! type "ruby" > /dev/null 2>&1; then
+if [ ! type "ruby" > /dev/null 2>&1 ]; then
     if [ "$DIST" = "1" ]; then
         brew install ruby
     elif [ "$DIST" = "2" ]; then
