@@ -43,6 +43,7 @@ ln -vis "${DIR}/.ideavimrc" ~/.ideavimrc
 # Install vim plugins
 vim +PluginUpdate +qa
 source ./deps/command-t.sh
+source ./deps/you-complete-me.sh
 
 # Install apps
 source ./deps/antigen.sh
