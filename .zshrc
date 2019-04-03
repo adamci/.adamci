@@ -57,6 +57,7 @@ alias ls='ls -GF'
 alias la='ls -lAh'
 alias mv='mv -i'
 alias cp='cp -i'
+alias  f='find . -name'
 
 # Colorful man pages
 man() {
