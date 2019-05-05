@@ -1,5 +1,11 @@
 source ~/.adamci/identify_os.sh
 
+# Load local settings
+if [ -f ~/.zshlocal ]; then
+    source ~/.zshlocal
+fi
+
+
 # The following lines were added by compinstall
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' max-errors 2 numeric
