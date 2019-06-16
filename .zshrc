@@ -63,7 +63,8 @@ alias ls='ls -GF'
 alias la='ls -lAh'
 alias mv='mv -i'
 alias cp='cp -i'
-alias  f='find . -name'
+alias f='find . -name'
+alias fcount='for file in *; do echo "`find $file -type f | wc -l` $file"; done'
 
 # Colorful man pages
 man() {
