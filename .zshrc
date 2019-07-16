@@ -66,6 +66,10 @@ alias cp='cp -i'
 alias f='find . -name'
 alias fcount='for file in *; do echo "`find $file -type f | wc -l` $file"; done'
 
+function manifest() {
+    unzip -p $1 META-INF/MANIFEST.MF
+}
+
 # Colorful man pages
 man() {
     env \
