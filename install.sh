@@ -13,13 +13,15 @@ if [ "$DIST" = "0" ]; then
     echo $'Unsupported OS\nAborting install_packages.sh!\n'
     exit 1
 fi
-if [ "$DIST" = "2" ] && [ ! type $ARCH_PACMAN > /dev/null 2>&1 ]; then
+if [ "$DIST" = "2" ] && ! type $ARCH_PACMAN &> /dev/null; then
     echo "Install $ARCH_PACMAN before continuing"
     exit 1
 fi
 
+echo "Installing for DIST=$DIST"
+
 # Validate presence of best editor
-if [ ! type "vim" > /dev/null 2>&1 ] || [ "$(vim --version | head -1 | cut -d ' ' -f 5 | head -c 1)" -lt "8" ]; then
+if ! type "vim" &> /dev/null || [ "$(vim --version | head -1 | cut -d ' ' -f 5 | head -c 1)" -lt "8" ]; then
     echo "Please install vim at version 8 or higher!"
     exit 1
 fi
@@ -33,11 +35,11 @@ if [ ! -d ~/.config/base16-shell ]; then
 fi
 
 # Create symbolic links
-which zsh > /dev/null 2>&1 && ln -vis "${DIR}/.zshrc" ~/.zshrc
-which vim > /dev/null 2>&1 && ln -vis "${DIR}/.vimrc" ~/.vimrc
-which git > /dev/null 2>&1 && ln -vis "${DIR}/.gitconfig" ~/.gitconfig
-which tmux > /dev/null 2>&1 && ln -vis "${DIR}/.tmux.conf" ~/.tmux.conf
-which ag > /dev/null 2>&1 && ln -vis "${DIR}/.agignore" ~/.agignore
+type zsh &> /dev/null && ln -vis "${DIR}/.zshrc" ~/.zshrc
+type vim &> /dev/null && ln -vis "${DIR}/.vimrc" ~/.vimrc
+type git &> /dev/null && ln -vis "${DIR}/.gitconfig" ~/.gitconfig
+type tmux &> /dev/null && ln -vis "${DIR}/.tmux.conf" ~/.tmux.conf
+type ag &> /dev/null && ln -vis "${DIR}/.agignore" ~/.agignore
 ln -vis "${DIR}/.ideavimrc" ~/.ideavimrc
 
 # Install vim plugins

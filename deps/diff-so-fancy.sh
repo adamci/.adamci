@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ ! type "diff-so-fancy" > /dev/null 2>&1 ]; then
+if ! type "diff-so-fancy" &> /dev/null; then
     if [ "$DIST" = "1" ]; then
         brew install diff-so-fancy
     elif [ "$DIST" = "2" ]; then
