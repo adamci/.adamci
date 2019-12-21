@@ -93,7 +93,7 @@ endfunction
 
 " CommandT config
 let g:CommandTTraverseSCM = 'pwd'
-let g:CommandTWildIgnore=&wildignore . ",*/node_modules/*,*/out/*"
+let g:CommandTWildIgnore=&wildignore . ",*/node_modules/*,*/out/*,*/lib/*"
 
 " YouCompleteMe Typescript config
 if !exists("g:ycm_semantic_triggers")
