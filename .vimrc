@@ -38,6 +38,7 @@ filetype plugin indent on    " required
 let mapleader = "\<Space>"
 set list
 set listchars=tab:>-
+set encoding=utf-8
 set ru
 set hlsearch
 set incsearch
