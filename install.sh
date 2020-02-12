@@ -50,7 +50,7 @@ source ./deps/you-complete-me.sh
 # Install apps
 source ./deps/antigen.sh
 source ./deps/pkgfile.sh
-source ./deps/diff-so-fancy.sh
-source ./deps/icdiff.sh
 source ./deps/ag.sh
 source ./deps/tmux.sh
+source ./deps/diff-so-fancy.sh
+source ./deps/icdiff.sh

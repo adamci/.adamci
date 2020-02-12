@@ -10,6 +10,9 @@ if ! type "ruby" &> /dev/null; then
         brew install ruby
     elif [ "$DIST" = "2" ]; then
         $ARCH_PACMAN -S ruby
+    else
+        echo "No instructions for installing ruby!"
+        exit 1
     fi
 fi
 

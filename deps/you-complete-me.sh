@@ -5,6 +5,9 @@ if ! type "cmake" &> /dev/null; then
         brew install cmake 
     elif [ "$DIST" = "2" ]; then
         $ARCH_PACMAN -S cmake
+    else
+        echo "No instructions for installing cmake"
+        exit 1
     fi
 fi
 
@@ -13,6 +16,11 @@ if ! type "go" &> /dev/null; then
         brew install go
     elif [ "$DIST" = "2" ]; then
         $ARCH_PACMAN -S go
+    elif [ "$DIST" = "4" ]; then
+        dnf install go
+    else
+        echo "No instructions for installing go"
+        exit 1
     fi
 fi
 

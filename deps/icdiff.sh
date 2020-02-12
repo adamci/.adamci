@@ -6,5 +6,8 @@ if ! type "icdiff" &> /dev/null; then
     elif [ "$DIST" = "2" ]; then
         $ARCH_PACMAN -S icdiff
         sudo ln -s /usr/bin/icdiff /usr/local/bin/icdiff
+    else
+        echo "No instructions for icdiff"
+        exit 1
     fi
 fi
