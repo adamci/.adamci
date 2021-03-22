@@ -10,6 +10,8 @@ if ! type "ruby" &> /dev/null; then
         brew install ruby
     elif [ "$DIST" = "2" ]; then
         $ARCH_PACMAN -S ruby
+    elif [ "$DIST" = "4" ]; then
+        sudo dnf install -y ruby
     else
         echo "No instructions for installing ruby!"
         exit 1

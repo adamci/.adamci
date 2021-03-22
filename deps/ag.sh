@@ -6,7 +6,7 @@ if ! type "ag" &> /dev/null; then
     elif [ "$DIST" = "2" ]; then
         $ARCH_PACMAN -S the_silver_searcher
     elif [ "$DIST" = "4" ]; then
-        dnf install the_silver_searcher
+        sudo dnf install -y the_silver_searcher
     else
         echo "No insturctions for silver searcher"
         exit 1
